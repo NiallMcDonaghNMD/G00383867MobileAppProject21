@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>movie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- <ul>
+  <li *ngFor="let movie of MovieData">
+   <h2> {{movie.Title}}</h2>
+   <p>{{movie.Year}}</p>
+   <img src="{{movie.Poster}}">
+  </li>
+</ul> -->
+
+<ion-card *ngFor="let movie of MovieData">
+  <img src="{{movie.Poster}}" />
+  <ion-card-header>
+    <ion-card-subtitle>Title</ion-card-subtitle>
+    <ion-card-title>{{movie.Title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{movie.Year}}
+  </ion-card-content>
+</ion-card>
+
+<ion-content [fullscreen]="true">
+  <ion-title>My status is : {{myStatus}}</ion-title>
+ <ion-button [routerLink]="['/status']">Update Status</ion-button>
+ 
+</ion-content>
+
+
