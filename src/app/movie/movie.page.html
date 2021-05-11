@@ -11,14 +11,7 @@
 </ion-header>
 
 <ion-content>
-<!-- <ul>
-  <li *ngFor="let movie of MovieData">
-   <h2> {{movie.Title}}</h2>
-   <p>{{movie.Year}}</p>
-   <img src="{{movie.Poster}}">
-  </li>
-</ul> -->
-
+  <!--Grabs data from the HTTP link from the ts page and puts it here-->
 <ion-card *ngFor="let movie of MovieData">
   <img src="{{movie.Poster}}" />
   <ion-card-header>
@@ -29,11 +22,6 @@
     {{movie.Year}}
   </ion-card-content>
 </ion-card>
-
-<ion-content [fullscreen]="true">
-  <ion-title>My status is : {{myStatus}}</ion-title>
- <ion-button [routerLink]="['/status']">Update Status</ion-button>
- 
 </ion-content>
 
 

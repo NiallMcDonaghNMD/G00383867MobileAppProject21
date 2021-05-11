@@ -5,17 +5,19 @@
       Home page App
     </ion-title>
   </ion-toolbar>
+  <!--Allows movement between the 3 other pages.-->
   <ion-button [routerLink]="['/movie']">Go to movies</ion-button>
   <ion-button [routerLink]="['/provinces']">Go to provinces</ion-button>
   <ion-button [routerLink]="['/status']">Go to Set Status</ion-button>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <br>
+  <!--Displays status from storage from the Status page.-->
   <ion-title>My Status is: {{myStatus}}</ion-title>
   
 
 <h2>Ionic Plugins</h2>
 <h2>Flashlight</h2>
+<!--Calls a function to use a native Cordova plugin to use the flashlight on a mobile device-->
 <ion-button (click)="Flashlight()">Flashlight</ion-button>
 <ion-content>

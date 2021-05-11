@@ -20,7 +20,7 @@ export class StatusPage implements OnInit {
     })
     .catch();
   }
-
+//Upon calling teh function, store the status from input and go to the main home page.
   updateStatus(){
     this.storage.set('status', this.myStatus)
     .then(()=>{

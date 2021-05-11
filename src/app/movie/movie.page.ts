@@ -12,7 +12,7 @@ MovieData:any=[];
   constructor(private movieService:MovieService) {
 
    }
-
+//Gets data from the http Service and puts it into a usable form
   ngOnInit() {
     this.movieService.GetMovieData().subscribe(
       (data)=>{
