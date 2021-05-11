@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Storage} from '@ionic/storage';
+import {Flashlight} from '@ionic-native/flashlight/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,7 +8,7 @@ import {Storage} from '@ionic/storage';
 })
 export class HomePage implements OnInit{
 myStatus: string;
-  constructor(private storage:Storage) {}
+  constructor(private storage:Storage, private flashlight: Flashlight) {}
 
   ngOnInit(){
 
@@ -16,5 +17,10 @@ myStatus: string;
       this.myStatus = data;
     })
     .catch();
+  }
+
+  Flashlight()
+  {
+    this.flashlight.toggle();
   }
 }

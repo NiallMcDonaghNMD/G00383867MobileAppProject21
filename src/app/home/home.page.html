@@ -1,16 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    
     <ion-title>
       Home page App
     </ion-title>
   </ion-toolbar>
+  <ion-button [routerLink]="['/movie']">Go to movies</ion-button>
+  <ion-button [routerLink]="['/provinces']">Go to provinces</ion-button>
+  <ion-button [routerLink]="['/status']">Go to Set Status</ion-button>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <br>
+  <ion-title>My Status is: {{myStatus}}</ion-title>
   
 
-  <ion-button [routerLink]="['/status']">Set Status</ion-button>
-  <ion-title>My Status is: {{myStatus}}</ion-title>
-  <ion-button [routerLink]="['/movie']">Go to movies</ion-button>
-
+<h2>Ionic Plugins</h2>
+<h2>Flashlight</h2>
+<ion-button (click)="Flashlight()">Flashlight</ion-button>
 <ion-content>
